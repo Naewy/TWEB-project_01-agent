@@ -7,5 +7,5 @@ const credentials = {"username": github_username, "token": github_token};
 
 const agent = new Agent(credentials);
 agent.fetchAndProcessAllRepos('Microsoft', 10, (err, repo) => {
-  agent.postTheData(repo, 'localhost:3000/data');
+  agent.postTheData(repo, 'https://sheltered-wave-21391.herokuapp.com/data');
 });
