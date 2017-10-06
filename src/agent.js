@@ -1,5 +1,5 @@
 const request = require('superagent');
-const fs = require('fs');
+const fs = require('fs-extra');
 
 class Agent {
   constructor(credentials) {
@@ -48,12 +48,12 @@ class Agent {
   }
   */
 
-  dataToFile(data, fileName) {
-    fs.writeFile(fileName, JSON.stringify(data), (err) => {
-      if (!err) {
-        console.log('File created');
+  dataToFile(data, filename) {
+    fs.writeFile(filename, JSON.stringify(data), (err) => {
+      if (err) {
+        throw err;
       } else {
-        console.log(err);
+        console.log('File created');
       }
     });
   }
