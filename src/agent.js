@@ -1,4 +1,5 @@
 const request = require('superagent');
+const fs = require('fs');
 
 class Agent {
   constructor(credentials) {
@@ -32,6 +33,7 @@ class Agent {
     fetchAndProcessPage(targetUrl, this.credentials);
   }
 
+  /*
   postTheData(data, url) {
     request
       .post(url)
@@ -39,11 +41,21 @@ class Agent {
       .end((err, res) => {
         if (err || !res.ok) {
           console.log('An error occured');
-        }
-        else {
+        } else {
           console.log('Data send to the server');
         }
       });
+  }
+  */
+
+  dataToFile(data, fileName) {
+    fs.writeFile(fileName, data, (err) => {
+      if (!err) {
+        console.log('File created');
+      } else {
+        console.log(err);
+      }
+    });
   }
 }
 
