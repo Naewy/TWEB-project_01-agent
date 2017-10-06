@@ -49,7 +49,7 @@ class Agent {
   */
 
   dataToFile(data, fileName) {
-    fs.writeFile(fileName, data, (err) => {
+    fs.writeFile(fileName, JSON.stringify(data), (err) => {
       if (!err) {
         console.log('File created');
       } else {
