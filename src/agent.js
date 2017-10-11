@@ -9,6 +9,7 @@ class Agent {
   fetchAndProcessAllRepos(owner, nbRepoToKeep, allReposAreAvailable) {
     const targetUrl = `https://api.github.com/orgs/${owner}/repos?state=all&per_page=100`;
     let repos = [];
+    repos = [];
     function fetchAndProcessPage(pageUrl, credentials) {
       console.log(`Fetching ${pageUrl}`);
       request
@@ -21,7 +22,7 @@ class Agent {
           if (res.links.next) {
             fetchAndProcessPage(res.links.next, credentials);
           } else {
-            let topRepos = [];
+            let topRepos = [JSON.parse(`{"entreprise" : "${owner}"}`)];
             repos.sort((elem1, elem2) => elem2.nb_issues - elem1.nb_issues);
             for (let i = 0; i < nbRepoToKeep; i += 1) {
               topRepos = topRepos.concat(repos[i]);
