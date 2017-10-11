@@ -2,7 +2,9 @@
 
 const Agent = require('../src/agent');
 const Storage = require('../src/storage');
-const credentials = require('../github-credentials.json');
+const github_username = process.env.GITHUB_USERNAME;
+const github_token = process.env.GITHUB_TOKEN;
+const credentials = {"username": github_username, "token": github_token};
 
 const repo = 'TWEB-project_01-client_side';
 const agent = new Agent(credentials);
