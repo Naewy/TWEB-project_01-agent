@@ -17,7 +17,7 @@ class Agent {
         .auth(credentials.username, credentials.token)
         .end((err, res) => {
           res.body.forEach((item) => {
-            repos = repos.concat({ id: item.id, name: item.name, nb_issues: item.open_issues });
+            repos = repos.concat({id: item.id, name: item.name, description: item.description, url: item.html_url, nb_issues: item.open_issues});
           });
           if (res.links.next) {
             fetchAndProcessPage(res.links.next, credentials);
