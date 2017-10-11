@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const Agent = require('./agent');
-const Storage = require('./storage');
+const Agent = require('../src/agent');
+const Storage = require('../src/storage');
 const credentials = require('../github-credentials.json');
 
 const repo = 'TWEB-project_01-client_side';
