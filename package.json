@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "fs-extra": "^4.0.2",
+    "github-publish": "^2.0.0",
     "superagent": "^3.6.1"
   }
 }

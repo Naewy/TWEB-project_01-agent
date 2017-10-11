@@ -32,31 +32,6 @@ class Agent {
     }
     fetchAndProcessPage(targetUrl, this.credentials);
   }
-
-  /*
-  postTheData(data, url) {
-    request
-      .post(url)
-      .send(data)
-      .end((err, res) => {
-        if (err || !res.ok) {
-          console.log('An error occured');
-        } else {
-          console.log('Data send to the server');
-        }
-      });
-  }
-  */
-
-  dataToFile(data, filename) {
-    fs.writeFile(filename, JSON.stringify(data), (err) => {
-      if (err) {
-        throw err;
-      } else {
-        console.log('File created');
-      }
-    });
-  }
 }
 
 module.exports = Agent;
