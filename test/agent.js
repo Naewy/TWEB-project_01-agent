@@ -6,9 +6,8 @@ const should = chai.should();
 
 describe('The agent', () => {
   it('should fetch repos', (done) => {
-    const owner = 'Microsoft';
     const agent = new Agent(credentials);
-    agent.fetchAndProcessAllRepos(owner, 10, (err, repos) => {
+    agent.fetchAndProcessAllRepos(10, (err, repos) => {
       should.not.exist(err);
       repos.should.be.an('array');
       done();
