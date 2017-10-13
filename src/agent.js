@@ -6,6 +6,8 @@ class Agent {
     this.credentials = credentials;
   }
 
+  fetchAndGetTheEntreprise
+
   fetchAndProcessAllRepos(owner, nbRepoToKeep, allReposAreAvailable) {
     const targetUrl = `https://api.github.com/orgs/${owner}/repos?state=all&per_page=100`;
     let repos = [];
@@ -22,7 +24,7 @@ class Agent {
           if (res.links.next) {
             fetchAndProcessPage(res.links.next, credentials);
           } else {
-            let topRepos = [JSON.parse(`{"entreprise" : "${owner}"}`)];
+            let topRepos = [JSON.parse(`{"name" : "${owner}", "url" : "https://github.com/Microsoft", "logo" : "https://avatars2.githubusercontent.com/u/6154722?v=4"}`)];
             repos.sort((elem1, elem2) => elem2.nb_issues - elem1.nb_issues);
             for (let i = 0; i < nbRepoToKeep; i += 1) {
               topRepos = topRepos.concat(repos[i]);
