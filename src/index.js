@@ -7,6 +7,7 @@ const agent = new Agent(credentials);
 const storage = new Storage(credentials.username, credentials.token, repo);
 
 agent.fetchAndProcessAllRepos(10, (err, repoList) => {
+  // Publish the data when available
   storage.publish('docs/data/data.json', JSON.stringify(repoList), 'Data updated', (error, result) => {
     if (!error) {
       console.log('Data successfully updated');

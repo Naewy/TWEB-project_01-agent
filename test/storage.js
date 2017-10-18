@@ -3,6 +3,7 @@ const credentials = require('../github-credentials.json');
 
 const should = require('chai').should();
 
+/* For this test we just push a JSON file on the agent repo, to see if we can push */
 describe('Storage', () => {
   it('should allow me to store a file on GitHub', (done) => {
     const repo = 'TWEB-project_01-agent';
