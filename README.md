@@ -24,8 +24,8 @@ Please note that the agent's code is fully commented so you can check it if you 
 #### Local test
 If you want to test the agent locally, use it as a simple *node.js* application : 
 	
-	$ npm install 									-> to install needed node_modules
-	$ node src/index.js								-> to run the agent
+	$ npm install 								-> to install needed node_modules
+	$ node src/index.js							-> to run the agent
 	$ node_modules/mocha/bin/mocha --timeout 20000 test/agent.js		-> to launch the test of the agent
 	$ node_modules/mocha/bin/mocha --timeout 20000 test/storage.js		-> to launch the test of the push/commit on the git 
 	
