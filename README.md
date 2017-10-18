@@ -58,6 +58,8 @@ Initialization (you will need to create a heroku account) :
 	$ heroku create
 	$ heroku addons:add scheduler 
 
+Note that for installing addons in heroku, you will need to seize the information of a valid credit card in your heroku account. Nevertheless, nothing will be debited on it and you will be able to install addons like *scheduler*.
+
 **2. Preparation for deployment**
 
 Heroku will need a folder *bin* to automatically find what to launch. You can remark in our arborescence that our *bin* folder contain a file without extension named *agent*.
