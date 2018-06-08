@@ -10,14 +10,14 @@
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.1.2",
-    "eslint": "^4.7.2",
-    "eslint-config-airbnb-base": "^12.0.1",
-    "eslint-plugin-import": "^2.7.0",
-    "mocha": "^3.5.3"
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "mocha": "^5.2.0"
   },
   "dependencies": {
-    "fs-extra": "^4.0.2",
+    "fs-extra": "^4.0.3",
     "github-publish": "^2.0.0",
-    "superagent": "^3.6.1"
+    "superagent": "^3.8.3"
   }
 }
